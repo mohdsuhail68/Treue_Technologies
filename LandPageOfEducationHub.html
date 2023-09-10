@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Gilroy";
+
+        }
+
+        html,
+        body {
+
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #main {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            /* background-color: red; */
+        }
+
+        #left {
+            width: 40%;
+            height: 100%;
+            position: relative;
+            /* background-color: yellow; */
+
+        }
+
+        #lnav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px 30px;
+
+        }
+
+        #lnavr a {
+            margin-right: 20px;
+
+
+        }
+
+        #right {
+            width: 60%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+
+
+        }
+
+
+
+        #rtop {
+            display: flex;
+            width: 100%;
+            height: 50%;
+            background-color: blueviolet;
+        }
+
+        #rbottom {
+
+            width: 100%;
+            height: 50%;
+            /* background-color: rgb(163, 163, 107); */
+            background-image: url(img0.jpg);
+            /* background-size: cover; */
+            background-position: center;
+            background-size: cover;
+
+        }
+
+        #rtopleft {
+            width: 55%;
+            height: 100%;
+            background-image: url(img\ 2.jpg);
+            background-size: cover;
+
+        }
+
+        #rtopright {
+            width: 45%;
+            height: 100%;
+            background-image: url(img3.jpg);
+            background-size: cover;
+            background-position: bottom;
+        }
+
+        #left #textcenter {
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #textcernter h1 {
+
+            font-size: larger;
+            font-weight: 900;
+
+        }
+
+        #textcenter a {
+
+            color: black;
+            border-bottom: 1px solid black;
+            text-decoration: none;
+            padding-bottom: 5px;
+            font-size: 25px;
+            font-weight: 400;
+            opacity: .6;
+        }
+
+        #textcenter p {
+
+            opacity: .6;
+            font-size: 12px;
+            line-height: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+
+        }
+
+        @media(max-width:600px) {
+            #main {
+                flex-direction: column;
+
+            }
+
+            #main #left {
+                width: 100%;
+            }
+
+            #main #right {
+
+                width: 100%;
+            }
+
+            .header {
+
+                width: 100%;
+                flex-shrink: unset;
+            }
+
+            .header h2 {
+
+                flex-direction: column;
+              
+            }
+        }
+
+        .header {
+            border-left: 7px solid blue;
+     
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+            
+            background-color: rgb(229, 241, 245);
+            background-blend-mode: lighten;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- <div  class="header">
+        <h1 style="text-align: left; font-family: cursive;">Treue Technology </h1>
+        <h2 style=" padding: 3px; ; margin-right: 35vw; font-family: cursive;">Task (1) *Landing Page* </h1>
+    </div> -->
+    <div style="margin-top: 1%;"id="main">
+
+        <div id="left">
+            <div id="lnav">
+              <h1 style="font-weight: bolder ; font-size: larger; color: royalblue;">Education Hub </h1> 
+                <div id="lnavr">
+                    <a href="">Home</a>
+
+                    <a href="#aboutus">About us </a>
+                   
+                </div>
+
+            </div>
+            <div id="textcenter">
+                <h1>Hello,</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dicta dignissimos? Laudantium cum totam
+                    non soluta atque accusamus quidem quibusdam doloribus fuga, veniam accusantium asperiores nemo, et
+                    odio ipsam provident?
+                </p>
+                <a href="read">
+                    Read
+                </a>
+            </div>
+        </div>
+        <div id="right">
+
+            <div id="rtop">
+                <div id="rtopleft"></div>
+                <div id="rtopright"></div>
+            </div>
+            <div id="rbottom"></div>
+
+        </div>
+
+
+    </div>
+
+    <div id="aboutus" style="background-color: royalblue; width:100%;   margin-top: 1vw;">
+        <h1 style=" padding:2%; text-align:center; color: white; font-weight: bolder;"> About us</h1>
+        <p style="padding: 2% ; text-align: center;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Natus consectetur ut est totam eos cupiditate <br> inventore
+             ratione explicabo dolores <br>soluta, tempore quis aliquid
+              temporibus? Laboriosam quod eligendi numquam laudantium eius?
+        </p>
+    </div>
+    
+    
+</body>
+
+</html>
