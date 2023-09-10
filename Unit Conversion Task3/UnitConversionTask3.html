@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Conversion</title>
+
+    <style>
+        body {
+
+            margin: 0px;
+            padding: 0px;
+
+            background-image: url(wallpaper.jpg);
+        }
+
+        .converter-body {
+            width: 400px;
+            height: 150px;
+
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 2px 2px 5px 5px #e2cbcb;
+
+            border: solid #e2cbcb 1px ;
+             background-color: rgb(240, 245, 250);
+           
+
+
+        }
+
+        .converter-title {
+            text-align: center;
+            margin: 13px 0px;
+
+        }
+
+        input {
+            height: 25px;
+            text-align: center;
+
+        }
+
+        #input {
+
+            margin-left: 25px;
+
+        }
+
+        #inputType,
+        #resultType {
+
+            width: 166.66px;
+            margin-left: 25px;
+        }
+
+        #resultType {
+
+            margin-left: 25px;
+        }
+
+        /* .container button{
+
+         width: 7%;
+         margin-left: 48%;
+         margin-top: 32%;
+         
+         text-align: center;
+         font-size:larger ;
+         font-family: cursive;
+         background-color: antiquewhite;
+
+        }
+
+        button:hover{
+
+            background-color: black;
+            font-size: larger;
+            color: white;
+
+        fill-rule: inherit;
+        } */
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="converter-body">
+        <h1 class="converter-title">Unit Conversion</h1>
+        <h3 style="text-align: center; font-weight: bolder;">Lenght</h3>
+                <input type="text" placeholder="input" id="input">
+        <span>=</span>
+        <input type="text" placeholder="Result" id="result">
+
+
+
+        <select id="inputType">
+            <option value="meter">Meter</option>
+            <option value="kilometer">Kilometer</option>
+            <option value="centimeter">Centimeter</option>
+        </select>
+
+        <select id="resultType">
+            <option value="meter">Meter</option>
+            <option value="kilometer">Kilometer</option>
+            <option value="centimeter">Centimeter</option>
+        </select>
+    </div>
+
+
+<!-- <div class="container">
+
+  <button onclick="myResult()"> Convert</button>
+</div> -->
+
+    <script text="text/javascript">
+
+
+var input = document.getElementById('input');
+        var Result = document.getElementById('result');
+        var inputType = document.getElementById('inputType');
+        var resultType = document.getElementById('resultType');
+        var inputTypeValue, resultTypeValue;
+
+        //now add listern
+        input.addEventListener("keyup", myResult);
+        inputType.addEventListener("change", myResult);
+        resultType.addEventListener("change", myResult);
+
+
+
+
+
+        function myResult() {
+
+
+            
+       
+            // result.value=input.value;
+
+            // now compare the iniput and resultType value and add formula
+
+            // when we chante the input and output type value we need to update the inputTypeValue 
+            inputTypeValue = inputType.value;
+            resultTypeValue = resultType.value;
+
+
+
+    
+
+            if (inputTypeValue === "meter" && resultTypeValue === "kilometer") {
+
+                // Kilometer Formula
+                result.value = Number(input.value) / 1000;
+
+            } 
+            else if (inputTypeValue === "meter" && resultTypeValue === "meter") {
+
+                //this is meter to meter formula
+                result.value = input.value;
+            }
+
+            if (inputTypeValue === "kilometer" && resultTypeValue === "meter") {
+
+                // kilometer to  meter
+                result.value = Number(input.value) * 1000;
+            } else if (inputTypeValue === "kilometer" && resultTypeValue === "centimeter") {
+
+                //this is kilometer to centimeter formula
+                result.value = Number(input.value) * 100000;
+            } else if (inputTypeValue === "kilometer" && resultTypeValue === "kilometer") {
+
+                //this is kilometer to kilometer formula
+                result.value = input.value;
+            } else if (inputTypeValue === "centimeter" && resultTypeValue === "kilometer") {
+
+                //this is centimeter to kilometer formula
+                result.value = Number(input.value) / 100000;
+            } else if (inputTypeValue === "centimeter" && resultTypeValue === "centimeter") {
+
+                //this is centimeter to centimeter formula
+                result.value = input.value;
+
+            } else if (inputTypeValue === "centimeter" && resultTypeValue === "meter") {
+
+                //this is centimeter to centimeter formula
+                result.value = Number(input.value) / 100;
+
+            } else if(inputTypeValue==="meter" && resultTypeValue==="centimeter"){
+
+//this is centimeter to centimeter formula
+result.value=Number(input.value)*100;
+
+}
+
+
+        }
+
+  
+
+
+    </script>
+
+</body>
+
+</html>

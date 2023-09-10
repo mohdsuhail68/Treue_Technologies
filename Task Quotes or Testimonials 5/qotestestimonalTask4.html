@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qotes and Testimonial</title>
+    <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body{
+
+            background:url(Background06.jpg) ;
+            background-repeat: no-repeat;
+        }
+
+        .hero {
+
+            /* background: #ff676d; */
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+        .hero h1 {
+
+            text-align: center;
+            padding-top: 80px;
+            font-size: 40px;
+            color: green;
+            text-shadow: rgb(0, 0, 0) 4px;
+
+        }
+
+        .slide-row {
+
+            display: flex;
+            width: 3200px;
+            transition: 0.6s;
+        }
+
+        .slide-col {
+            width: 800px;
+            height: 400px;
+            position: relative;
+
+        }
+
+        .user-img {
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+
+        }
+
+        .user-img img {
+
+            height: 100%;
+            border-radius: 10px;
+
+        }
+
+        .user-text {
+
+            background: #2d3a59;
+            width: 520px;
+            height: 270;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 10px;
+            color: #d3d4d6;
+            padding: 45px;
+            box-sizing: border-box;
+            z-index: 2;
+
+        }
+
+        .user-text p {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        .user-text h3 {
+
+            margin: 35px 0 5px;
+            color: #fff;
+        }
+
+        .container {
+
+            width: 800px;
+            height: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .indicator {
+
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -50px;
+
+        }
+
+        .btn {
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            margin: 4px;
+            border-radius: 15px;
+          background: rgb(2, 0, 0);
+            cursor: pointer;
+            transition: 0.5s;
+
+        }
+
+
+        .active {
+
+            width: 45px;
+     
+        }
+
+        .testimonial {
+
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="hero">
+
+        <h1>Qotes & Testimonials</h1>
+
+        <div class="container">
+            <div class="indicator">
+                <span class="btn active"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                
+
+            </div>
+            <div class="testimonial">
+
+
+                <div class="slide-row " id="slide">
+                    <div class="slide-col">
+                        <div class="user-text">
+                            <p>“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.”</p>
+                            <h3>--Albert Einsten</h3>
+                            <p>Author</p>
+                        </div>
+                        <div class="user-img">
+                            <img src="pic1.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="slide-col">
+                        <div class="user-text">
+                            <p>“After long reflection in solitude and meditation, I suddenly had the idea, during the year 1923, that the discovery made by Einstein in 1905 should be generalised by extending it to all material particles and notably to electrons.”</p>
+                                <h3>― Louis de Broglie</h3>
+                                <p>Author</p>
+                        </div>
+                        <div class="user-img">
+                            <img src="de1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="slide-col">
+                        <div class="user-text">
+                            <p>“When something is important enough, you do it even if the odds are not in your favour.”</p>
+                                <h3>― Elon Musk</h3>
+                                <p>Author</p>
+                        </div>
+                        <div class="user-img">
+                            <img src="elon1.jfif" alt="">
+                        </div>
+                    </div>
+                    <div class="slide-col">
+                        <div class="user-text">
+                            <p>“Many of life's failures are people who did not realize how close they were to success when they gave up.”</p>
+                                <h3>― Thomas A. Edison</h3>
+                                <p>Author</p>
+                        </div>
+                        <div class="user-img">
+                            <img src="tho1.jpg" alt="">
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        var btn = document.getElementsByClassName("btn");
+        var slide = document.getElementById("slide");
+        btn[0].onclick = function () {
+            slide.style.transform = "translateX(0px)";
+            for(i=0; i<4; i++){
+                btn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[1].onclick = function () {
+            slide.style.transform = "translateX(-800px)";
+            for(i=0; i<4; i++){
+                btn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[2].onclick = function () {
+            slide.style.transform = "translateX(-1600px)";
+            for(i=0; i<4; i++){
+                btn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[3].onclick = function () {
+            slide.style.transform = "translateX(-2400px)";
+            for(i=0; i<4; i++){
+                btn[i].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+
+
+    </script>
+</body>
+
+</html>
